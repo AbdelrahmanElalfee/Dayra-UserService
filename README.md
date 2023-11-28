@@ -62,15 +62,16 @@ You can now access the server at http://localhost:8000
 ## Folders
 
 - `app` - Contains all the Eloquent models
-- `app/Http/Controllers/Api` - Contains all the api controllers
+- `app/Http/Controllers` - Contains all the api controllers
 - `app/Http/Middleware` - Contains the JWT auth middleware
 - `app/Http/Requests` - Contains all the form requests
 - `app/Http/Resources` - Contains all the resource files
+- `app/Http/Exception` - Contains all the exception files
 - `app/Repositories` - Contains all the repositories files
+- `app/Traits` - Contains all the traits files
 - `config` - Contains all the application configuration files
 - `database/factories` - Contains the model factory for all the models
 - `database/migrations` - Contains all the database migrations
-- `database/seeds` - Contains the database seeder
 - `routes` - Contains all the api routes defined in api.php file
 - `tests` - Contains all the application tests
 
