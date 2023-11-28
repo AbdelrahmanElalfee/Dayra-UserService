@@ -66,6 +66,7 @@ You can now access the server at http://localhost:8000
 - `app/Http/Middleware` - Contains the JWT auth middleware
 - `app/Http/Requests` - Contains all the form requests
 - `app/Http/Resources` - Contains all the resource files
+- `app/Repositories` - Contains all the repositories files
 - `config` - Contains all the application configuration files
 - `database/factories` - Contains the model factory for all the models
 - `database/migrations` - Contains all the database migrations
