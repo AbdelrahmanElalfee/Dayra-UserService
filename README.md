@@ -61,7 +61,7 @@ You can now access the server at http://localhost:8000
 
 ## Folders
 
-- `app` - Contains all the Eloquent models
+- `app/Models` - Contains all the Eloquent models
 - `app/Http/Controllers` - Contains all the api controllers
 - `app/Http/Middleware` - Contains the JWT auth middleware
 - `app/Http/Requests` - Contains all the form requests
