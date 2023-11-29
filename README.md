@@ -51,6 +51,18 @@ Start the local development server
 
 You can now access the server at http://localhost:8000
 
+Set Rabbitmq connection in .env file
+
+    RABBITMQ_HOST=
+    RABBITMQ_PORT=5672
+    RABBITMQ_USER=
+    RABBITMQ_PASSWORD=
+    RABBITMQ_VHOST=
+
+Run the queues
+
+    php artisan queue:work
+
 ----------
 
 # Code overview
@@ -58,10 +70,12 @@ You can now access the server at http://localhost:8000
 ## Dependencies
 
 - [jwt-auth](https://github.com/tymondesigns/jwt-auth) - For authentication using JSON Web Tokens
+- [laravel-queue-rabbitmq](https://github.com/vyuldashev/laravel-queue-rabbitmq) - For message broker using RabbitMQ
 
 ## Folders
 
 - `app/Models` - Contains all the Eloquent models
+- `app/Jobs` - Contains all the jobs files
 - `app/Http/Controllers` - Contains all the api controllers
 - `app/Http/Middleware` - Contains the JWT auth middleware
 - `app/Http/Requests` - Contains all the form requests
@@ -104,7 +118,7 @@ Request headers
 
 # Authentication
 
-These applications use JSON Web Token (JWT) to handle authentication. 
+These application use JSON Web Token (JWT) to handle authentication. 
 The token is passed with each request using the `Authorization` header with `Token` scheme. 
 The JWT authentication middleware handles the validation and authentication of the token. 
 Please check the following sources to learn more about JWT.
