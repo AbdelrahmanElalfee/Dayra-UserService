@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use App\Jobs\UserCreated;
 use App\Models\User;
 use App\Traits\Responses;
 use Illuminate\Http\JsonResponse;
@@ -48,6 +49,7 @@ class AuthRepository implements AuthRepositoryInterface {
             ]);
 
             DB::commit();
+            UserCreated::dispatch($user->toArray());
             return $this->createToken(Auth::attempt([
                     'email' => data_get($attributes, 'email'),
                     'password' => data_get($attributes, 'password')
