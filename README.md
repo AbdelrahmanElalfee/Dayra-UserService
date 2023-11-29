@@ -65,6 +65,14 @@ Run the queues
 
 ----------
 
+# Running Tests
+
+To run tests, run the following command
+
+    php artisan test
+
+----------
+
 # Code overview
 
 ## Dependencies
