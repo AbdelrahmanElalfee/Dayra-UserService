@@ -20,6 +20,6 @@ Route::group([
 ], function () {
     Route::post('login', [\App\Http\Controllers\AuthController::class, 'login']);
     Route::post('register', [\App\Http\Controllers\AuthController::class, 'register']);
-    Route::get('logout', [\App\Http\Controllers\AuthController::class, 'logout'])->middleware('jwt.verify');
     Route::get('', [\App\Http\Controllers\AuthController::class, 'me'])->middleware('jwt.verify');
+    Route::get('logout', [\App\Http\Controllers\AuthController::class, 'logout'])->middleware('jwt.verify');
 });

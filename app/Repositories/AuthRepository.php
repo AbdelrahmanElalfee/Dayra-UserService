@@ -68,7 +68,8 @@ class AuthRepository implements AuthRepositoryInterface {
 
     public function me(): JsonResponse
     {
-        return $this->success(new UserResource(Auth::user()),'Authenticated', Response::HTTP_FOUND);
+        $user = User::find(Auth::id());
+        return $this->success($user->id,'Authenticated');
     }
 
     public function createToken($token): JsonResponse
